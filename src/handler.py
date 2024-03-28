@@ -2,7 +2,6 @@ import asyncio
 from concurrent.futures import ThreadPoolExecutor
 
 import asyncpg
-from dotenv import load_dotenv
 from loguru import logger
 
 from src.constants import EXCEL_FILE, DB_NAME, DB_USERNAME, DB_PASSWORD, GROUP_CHAT_ID, MESSAGE_HEADER, MESSAGE_CONTENT
@@ -10,8 +9,6 @@ from src.database import get_product_by_product_id, create_product, update_last_
 from src.excel import get_product_ids
 from src.parser import parse_product
 from src.telegram_bot import send_message_to_group
-
-load_dotenv()
 
 
 async def handle_reviews():
